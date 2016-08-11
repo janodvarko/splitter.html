@@ -94,6 +94,8 @@ let Container3 = React.createFactory(React.createClass({
       div({className: 'splitBoxParent'},
         SplitBox({
           initialSize: 200,
+          minWidth: 100,
+          maxWidth: 300,
           left: div({className: 'panel title'},
             '3. example again showing left and right side panels, but the resizing logic is different'
           ),
@@ -159,8 +161,8 @@ let Container5 = React.createFactory(React.createClass({
           className: 'leftFlexSplitter',
           flexBox: true,
           initialSize: 200,
-          minWidth: 100,
-          maxWidth: 300,
+          minSize: 100,
+          maxSize: 300,
           left:
             div({
               className: 'panel title',
@@ -178,8 +180,8 @@ let Container5 = React.createFactory(React.createClass({
           className: 'rightFlexSplitter',
           flexBox: true,
           initialSize: 200,
-          minWidth: 100,
-          maxWidth: 300,
+          minSize: 100,
+          maxSize: 300,
           rightControl: true,
           right: div({
             className: 'panel rightFlexPanel',
