@@ -4,11 +4,13 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: [
-    './index.js'
-  ],
+  entry: {
+    'index': './index.js',
+    'horizontal': './horizontal.js',
+    'vertical': './vertical.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name]-bundle.js',
   },
   module: {
     loaders: [
